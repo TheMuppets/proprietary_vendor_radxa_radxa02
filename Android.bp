@@ -3,9 +3,6 @@
 //
 
 soong_namespace {
-    imports: [
-        "vendor/amlogic/g12-common",
-    ],
 }
 
 cc_prebuilt_library_shared {
@@ -20,17 +17,20 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/egl/libGLES_mali.so",
             ],
             shared_libs: [
+                "android.hardware.graphics.allocator-V2-ndk",
+                "libbinder_ndk",
                 "libnativewindow",
                 "libutils",
-                "liblog",
-                "libdmabufheap",
-                "libz",
-                "libcutils",
-                "arm.graphics-V1-ndk_platform",
                 "android.hardware.graphics.mapper@4.0",
                 "libgralloctypes",
                 "libhidlbase",
+                "liblog",
+                "libcutils",
                 "libhardware",
+                "android.hardware.graphics.common-V7-ndk",
+                "libbase",
+                "libdmabufheap",
+                "libz",
                 "libc++",
                 "libc",
                 "libm",
